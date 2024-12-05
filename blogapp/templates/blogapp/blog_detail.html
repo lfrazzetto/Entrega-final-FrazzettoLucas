@@ -1,0 +1,14 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}{{ blog.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ blog.title }}</h1>
+<h3>{{ blog.subtitle }}</h3>
+<p>Por <strong>{{ blog.author }}</strong> el <em>{{ blog.created_at }}</em></p>
+<p>{{ blog.content }}</p>
+{% if blog.image %}
+<img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="img-fluid">
+{% endif %}
+<a href="{% url 'home' %}" class="btn btn-secondary mt-3">Volver al listado</a>
+{% endblock %}

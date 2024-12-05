@@ -1,0 +1,14 @@
+{% extends 'blogapp/base.html' %}
+
+
+{% block title %}{{ action }} Blog{% endblock %}
+
+{% block content %}
+<h1>{{ action }} Blog</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">{{ action }}</button>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}

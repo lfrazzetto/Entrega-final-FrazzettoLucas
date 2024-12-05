@@ -1,0 +1,12 @@
+/* Estilos para la barra de navegación */
+.navbar form {
+    display: inline;
+}
+
+.navbar form button {
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    text-align: inherit;
+}

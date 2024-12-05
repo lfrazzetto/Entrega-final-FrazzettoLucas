@@ -1,0 +1,13 @@
+{% extends 'blogapp/base.html' %}
+
+{% block title %}Borrar Blog{% endblock %}
+
+{% block content %}
+<h1>Borrar Blog</h1>
+<p>¿Estás seguro de que deseas borrar el blog "{{ blog.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Borrar</button>
+    <a href="{% url 'home' %}" class="btn btn-secondary">Cancelar</a>
+</form>
+{% endblock %}
