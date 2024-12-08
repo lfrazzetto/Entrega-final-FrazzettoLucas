@@ -1,0 +1,44 @@
+Pruebas de Conexión y Acceso al Blog
+
+1. Verificar el acceso al sitio principal
+   - URL: http://127.0.0.1:8000/
+   - Esperado:
+     - La página principal carga correctamente.
+     - Se muestra el navbar con las opciones "Home", "Blogs", "Iniciar Sesión" o "Cerrar Sesión" , "Registrarse" dependiendo del estado del usuario.
+
+2. Acceso a la lista de blogs
+   - URL: http://127.0.0.1:8000/
+   - Esperado:
+     - Si existen blogs en la base de datos:
+       - Se muestra una lista de blogs con título, subtítulo y autor.
+       - Cada entrada tiene un enlace para acceder al detalle del blog.
+     - Si no existen blogs:
+       - Mensaje "No hay blogs disponibles".
+
+3. Pruebas de autenticación
+   - Registro:
+     - URL: http://127.0.0.1:8000/accounts/signup/
+     - Esperado:
+       - Formulario de registro.
+       - Al completar correctamente, el usuario se registra y accede al sistema.
+   - Login:
+     - URL: http://127.0.0.1:8000/accounts/login/
+     - Esperado: coderuser/coder2024
+       - Formulario de inicio de sesión.
+       - Al ingresar credenciales válidas, redirige a la página principal.
+   - Logout:
+     - "Cerrar sesion"
+     - Esperado:
+       - El usuario es redirigido a la página principal cambiando las opciones visibles en el nav
+
+
+4. **Gestión de blogs:**
+   - Crear un nuevo blog desde `/blog/new/`. - Si el usuario no esta registrado lo deriva al login
+   - Editar un blog existente desde `/blog/<id>/edit/`. Elegir ID desde 1 al 5 para probar edcion. Si el usuario no esta registrado lo deriva al login
+   - Eliminar un blog existente desde `/blog/<id>/delete/`. Elegir ID desde 1 al 5 para probar borrado.  Si el usuario no esta registrado lo deriva al login
+   - Ver el detalle de un blog en `/blog/<id>/`.
+
+5. **Gestión de perfil:**
+   - Editar el perfil desde `/accounts/profile/edit/`.
+   - Editar el perfil desde Dropdown
+   - Eliminar la cuenta desde `/accounts/profile/delete/`. O desde la edicion tambien se puede
