@@ -6,8 +6,7 @@ Este proyecto es un sistema de blogs desarrollado con Django como trabajo final 
 
 
 Accede al sitio en http://127.0.0.1:8000/.
-
-
+Link al video explicativo: https://drive.google.com/file/d/1j54N-9n-gd2lkLmr2cVonxB1azMExmQl/view?usp=drive_link
 
 ---
 
